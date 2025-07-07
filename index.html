@@ -184,27 +184,56 @@
 
 <!-- 🔐 Lock Screen Section -->
 <div id="lockScreen" style="position:fixed;top:0;left:0;width:100%;height:100%;background:#ffeef4;z-index:9999;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:20px">
- <h2>🌸 For Hyvine Only</h2>
+ <h2>🌸 For Tetyo Only</h2>
 <p>Type your first name to unlock this special message:</p>
   <input type="text" id="nameCheck" placeholder="your name..." class="form-control w-50 mb-3" />
   <button onclick="checkName()" class="btn btn-primary">log in</button>
   <p id="nameError" class="text-danger mt-2"></p>
 </div>
-<section id="barua" class="text-center">
+<section id="barua" class="text-center py-5" style="background-color: #fff6f9;">
   <div class="container">
-    <h2 class="section-title">Love Letter</h2>
-    <div class="letter-box mx-auto" style="max-width: 700px;">
-      Dear Hyvine,<br><br>
-      I don't know what drew me to you the first time — but the truth is, every time I see you, my heart beats differently. Your smile is medicine, and your eyes are a story.
-      <br><br>
-      I've been trying to find the words to express these feelings... but my heart simply says: <strong>"I want a chance to be by your side, to know you more, and to love you truly."</strong>
-      <br><br>
-      If you can give me that chance, I’ll make sure you laugh more, feel safe, and never lose your worth.
-      <br><br>
-      With respect and love,  
-      <br><strong>Ezra 🌹</strong>
-      <br><br>
-      <button class="btn btn-sm btn-outline-danger" onclick="document.getElementById('secret').style.display='block'">❤️ Click here to see the secret</button>
+    <h2 class="section-title">💌 Since We Started Talking...</h2>
+    <div class="letter-box mx-auto shadow p-4" style="max-width: 700px; background: white; border-left: 5px solid #e75480; border-radius: 10px;">
+      <p class="text-start" style="line-height: 1.8;">
+        Dear Hyvine,<br><br>
+
+        Since we started talking, there’s a quiet part of me that feels awakened. You’re in Mulot, I’m in Migori — yet somehow, your presence bridges the space between us more than you know.
+        <br><br>
+
+        But truth be told, this didn’t all begin with our first chat. The first time I ever saw you, we were at home — and you were heading toward Kataret Centre. You didn’t notice me that day... but I noticed you. I remember pausing for a moment, as if time decided to slow down just for me to take in your presence. That single moment stayed with me far longer than I expected.
+        <br><br>
+
+        I never imagined that the same girl I saw walking away that day would later be someone I think about so often — someone whose words make my day better, whose smile (even in imagination) brings light into my world.
+        <br><br>
+
+        We're not close in distance, but I hope one day, we can be close in something deeper — in laughter, understanding, and shared moments that aren't bound by location. I’m not here to rush anything. I just want a chance — a quiet, honest chance — to know your world.
+        <br><br>
+
+        And if you ever feel the same spark, even just a flicker — I’ll be here. Steady. Sincere. And so willing to try.
+        <br><br>
+
+        With a heart full of respect and hope,<br>
+        <strong>Ezra 🌹</strong>
+      </p>
+    </div>
+  </div>
+</section>
+
+
+<!-- 💌 Letter Response Form -->
+<section class="text-center bg-white">
+  <div class="container">
+    <h2 class="section-title">💌 Reply to My Letter</h2>
+    <p>Write your response here. I will keep it in my heart forever 💖</p>
+    <form id="letterForm" action="https://formspree.io/f/mpwregvq" method="POST">
+      <textarea name="ujumbe" id="replyMessage" class="form-control mb-3" rows="3" placeholder="Your reply here..."></textarea>
+      <button class="btn btn-success">Send Reply</button>
+      <div id="replyConfirm" class="mt-3 text-success fw-bold"></div>
+    </form>
+  </div>
+</section>
+<br><br>
+      <button class="btn btn-sm btn-outline-danger" onclick="document.getElementById('secret').style.display='block'" style="text-align: center;">❤️ Click here to see the secret</button>
       <div class="secret-message" id="secret">Hyvine... my dream is not just to date you, but to walk life with you — one smile, one laugh, one love at a time. 💌</div>
     </div>
   </div>
@@ -327,18 +356,6 @@
   </div>
 </section>
 
-<!-- 💌 Letter Response Form -->
-<section class="text-center bg-white">
-  <div class="container">
-    <h2 class="section-title">💌 Reply to My Letter</h2>
-    <p>Write your response here. I will keep it in my heart forever 💖</p>
-    <form id="letterForm" action="https://formspree.io/f/mpwregvq" method="POST">
-      <textarea name="ujumbe" id="replyMessage" class="form-control mb-3" rows="3" placeholder="Your reply here..."></textarea>
-      <button class="btn btn-success">Send Reply</button>
-      <div id="replyConfirm" class="mt-3 text-success fw-bold"></div>
-    </form>
-  </div>
-</section>
 
 <!-- 🎧 Custom Music Player -->
 <section class="text-center">
@@ -527,7 +544,7 @@ const compliments = [
     if (input === 'hyvine') {
       document.getElementById('lockScreen').style.display = 'none';
     } else {
-error.innerText = "Sorry, this message is for Hyvine only 💌";
+error.innerText = "Sorry, this message is for hyvine only 💌";
     }
   }
 
