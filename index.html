@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hyvine Special 💖</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to right, #fff0f5, #fff);
+      color: #333;
+      scroll-behavior: smooth;
+    }
+    header {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      background: url('https://images.unsplash.com/photo-1495567720989-cebdbdd97913?auto=format&fit=crop&w=1500&q=80') center/cover no-repeat;
+      color: white;
+      position: relative;
+    }
+    header::after {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background-color: rgba(0, 0, 0, 0.6);
+      z-index: 1;
+    }
+    .header-content {
+      z-index: 2;
+      padding: 0 20px;
+    }
+    .hero-title {
+      font-size: 2.7rem;
+      font-family: 'Great Vibes', cursive;
+    }
+    .typed-text {
+      font-size: 1.2rem;
+      margin-top: 15px;
+    }
+    .btn-custom {
+      background-color: #e75480;
+      border: none;
+      color: white;
+      margin-top: 25px;
+    }
+    section {
+      padding: 60px 20px;
+    }
+    .section-title {
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+    .letter-box {
+      background-color: #fff6f9;
+      border-left: 5px solid #f06292;
+      padding: 30px;
+      border-radius: 10px;
+      margin-top: 30px;
+      font-style: italic;
+    }
+    .choice-btn {
+      margin: 10px;
+      font-size: 1.1rem;
+    }
+    footer {
+      background: #222;
+      color: #ccc;
+      text-align: center;
+      padding: 30px 20px;
+    }
+    .why-section {
+      background-color: #ffeaf4;
+      padding: 60px 20px;
+    }
+    .why-card {
+      background: white;
+      border: none;
+      border-radius: 12px;
+      padding: 25px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      margin: 15px 0;
+    }
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+    }
+    .gallery img {
+      border-radius: 10px;
+      max-width: 250px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+    }
+    .secret-message {
+      display: none;
+      margin-top: 20px;
+      background: #fef1f6;
+      padding: 20px;
+      border-radius: 10px;
+      font-style: italic;
+    }
+    .quote-box {
+      margin-top: 30px;
+      font-weight: 500;
+      font-size: 1.1rem;
+      color: #c2185b;
+    }
+    .chat-bubble {
+      background: #f3f3f3;
+      border-radius: 15px;
+      padding: 12px 20px;
+      margin: 8px 0;
+      display: inline-block;
+      max-width: 80%;
+    }
+    .chat-me { background-color: #e0f7fa; align-self: flex-end; }
+    .chat-her { background-color: #ffeaf4; align-self: flex-start; }
+    .chat-box {
+      display: flex;
+      flex-direction: column;
+      max-width: 600px;
+      margin: auto;
+    }
+
+  .heart-rain {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 999;
+  }
+  .heart {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: pink;
+    transform: rotate(45deg);
+    animation: fall 8s linear infinite;
+    opacity: 0.6;
+  }
+  .heart::before, .heart::after {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: pink;
+    border-radius: 50%;
+  }
+  .heart::before {
+    top: -10px;
+    left: 0;
+  }
+  .heart::after {
+    left: -10px;
+    top: 0;
+  }
+  @keyframes fall {
+    0% {transform: translateY(0) rotate(45deg);}
+    100% {transform: translateY(100vh) rotate(45deg);}
+  }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-content">
+      <h1 class="hero-title">Hyvine, this is from my Heart 💌</h1>
+      <p class="typed-text" id="typed-text"></p>
+      <p class="mt-3">— <strong>Ezra 💫</strong></p>
+      <button class="btn btn-custom px-4 py-2" onclick="document.getElementById('barua').scrollIntoView({behavior: 'smooth'})">Read My Letter 💖</button>
+    </div>
+    <audio autoplay loop>
+      <source src="https://cdn.pixabay.com/download/audio/2023/03/16/audio_4ac3c95c2f.mp3?filename=romantic-piano-144998.mp3" type="audio/mpeg">
+    </audio>
+  </header>
+
+
+<!-- 🔐 Lock Screen Section -->
+<div id="lockScreen" style="position:fixed;top:0;left:0;width:100%;height:100%;background:#ffeef4;z-index:9999;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:20px">
+ <h2>🌸 For Hyvine Only</h2>
+<p>Type your first name to unlock this special message:</p>
+  <input type="text" id="nameCheck" placeholder="your name..." class="form-control w-50 mb-3" />
+  <button onclick="checkName()" class="btn btn-primary">log in</button>
+  <p id="nameError" class="text-danger mt-2"></p>
+</div>
+<section id="barua" class="text-center">
+  <div class="container">
+    <h2 class="section-title">Love Letter</h2>
+    <div class="letter-box mx-auto" style="max-width: 700px;">
+      Dear Hyvine,<br><br>
+      I don't know what drew me to you the first time — but the truth is, every time I see you, my heart beats differently. Your smile is medicine, and your eyes are a story.
+      <br><br>
+      I've been trying to find the words to express these feelings... but my heart simply says: <strong>"I want a chance to be by your side, to know you more, and to love you truly."</strong>
+      <br><br>
+      If you can give me that chance, I’ll make sure you laugh more, feel safe, and never lose your worth.
+      <br><br>
+      With respect and love,  
+      <br><strong>Ezra 🌹</strong>
+      <br><br>
+      <button class="btn btn-sm btn-outline-danger" onclick="document.getElementById('secret').style.display='block'">❤️ Click here to see the secret</button>
+      <div class="secret-message" id="secret">Hyvine... my dream is not just to date you, but to walk life with you — one smile, one laugh, one love at a time. 💌</div>
+    </div>
+  </div>
+</section>
+
+  <div class="heart-rain" id="heartRain"></div>
+
+<section class="why-section text-center">
+  <div class="container">
+    <h2 class="section-title">Why You, Hyvine?</h2>
+    <div class="row justify-content-center">
+      <div class="col-md-4">
+        <div class="why-card">
+          <h5>🌟 Your Smile</h5>
+          <p>When you shine, my world lights up too. Your smile is my peace.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="why-card">
+          <h5>💬 Your Communication</h5>
+          <p>You know how to speak in a way that touches the heart. You’re not ordinary.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="why-card">
+          <h5>❤️ Your Pure Heart</h5>
+          <p>You are different — your gentleness, your humanity, and how you respect everyone.</p>
+        </div>
+      </div>
+    </div>
+    <div class="quote-box" id="quoteBox">“True love comes unexpectedly, but stays forever.”</div>
+  </div>
+</section>
+
+
+  <section class="text-center">
+    <div class="container">
+      <h2 class="section-title">📸 Picha & Memory Gallery</h2>
+      <div class="gallery">
+        <img src="WhatsApp Image 2025-07-07 at 16.38.11.jpeg" alt="">
+        <img src="WhatsApp Image 2025-07-07 at 16.49.26.jpeg" alt="">
+      </div>
+    </div>
+  </section>
+<section class="text-center">
+  <div class="container">
+    <h2 class="section-title">💬 WhatsApp Chat Preview</h2>
+    <div class="chat-box">
+      <div class="chat-bubble chat-me">Ezra: Can I tell you a secret?</div>
+      <div class="chat-bubble chat-her">Hyvine: Yeah, tell me 😊</div>
+      <div class="chat-bubble chat-me">Ezra: I have no peace without your smile.</div>
+      <div class="chat-bubble chat-her">Hyvine: 😳 Ezraaaa! Stop 🤭</div>
+      <div class="chat-bubble chat-me">Ezra: I'm serious. Every day starts better when I see you.</div>
+    </div>
+  </div>
+</section>
+
+<section class="text-center bg-white">
+  <div class="container">
+    <h2 class="section-title">📖 How Our Journey Could Be</h2>
+    <p class="lead">This is my dream about the two of us...</p>
+    <div class="timeline">
+      <ul class="list-unstyled">
+        <li><strong>🧡 When We Start as Friends</strong> – A place where your humor keeps drawing me in every day.</li>
+        <li><strong>💑 When We Start a Relationship</strong> – We begin to share dreams, joy, and life.</li>
+        <li><strong>🌍 Traveling Together</strong> – Visiting new places, creating memories together.</li>
+        <li><strong>💍 A Forever Promise</strong> – One day, I’ll kneel down and say, “Will you be mine?”</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="text-center bg-light">
+  <div class="container">
+    <h2 class="section-title">⏳ Since I Saw You...</h2>
+    <p class="lead">It has been <span id="daysCounter"></span> days since I started seeing you as someone special 💫</p>
+  </div>
+</section>
+
+
+<section class="text-center">
+  <div class="container">
+    <h2 class="section-title">💬 Compliment Generator</h2>
+    <button class="btn btn-outline-primary" onclick="showCompliment()">Give me a compliment 😊</button>
+    <p class="mt-3" id="complimentBox"></p>
+  </div>
+</section>
+<!-- 📍 Dream Date Location -->
+<section class="text-center bg-light py-4">
+  <div class="container">
+    <h2 class="section-title">📍 The Place I’d Love to Take You on a Date</h2>
+    <p class="mb-3">I imagined us meeting here, watching the sunset while holding hands 🌅</p>
+
+    <!-- Kap Raphael label -->
+    <h4 style="font-weight:bold; margin-bottom:10px; color:#d63384;">📌 Kap Raphael</h4>
+
+    <!-- Responsive Satellite Map -->
+    <div style="position:relative; width:100%; padding-bottom:56.25%; height:0; overflow:hidden; border-radius:10px;">
+      <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m21!1m12!1m3!1d14703.654095199203!2d35.17730376429738!3d-0.9293554762059161!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m6!3e6!4m0!4m3!3m2!1d-0.9269978754628682!2d35.1754174361684!5e1!3m2!1sen!2ske!4v1751890599980!5m2!1sen!2ske&layer=c" 
+        style="position:absolute; top:0; left:0; width:100%; height:100%; border:0; border-radius:10px;" 
+        allowfullscreen="" 
+        loading="lazy" 
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- ✍️ Confession Form (Formspree updated) -->
+<section class="text-center bg-white">
+  <div class="container">
+    <h2 class="section-title">✍️ Tell Me Your Secret</h2>
+    <form action="https://formspree.io/f/mpwregvq" method="POST">
+      <textarea name="ujumbe" class="form-control" rows="3" placeholder="Write your message here..."></textarea>
+      <button class="btn btn-dark mt-3" type="submit">Send Message</button>
+    </form>
+  </div>
+</section>
+
+<!-- 💌 Letter Response Form -->
+<section class="text-center bg-white">
+  <div class="container">
+    <h2 class="section-title">💌 Reply to My Letter</h2>
+    <p>Write your response here. I will keep it in my heart forever 💖</p>
+    <form id="letterForm" action="https://formspree.io/f/mpwregvq" method="POST">
+      <textarea name="ujumbe" id="replyMessage" class="form-control mb-3" rows="3" placeholder="Your reply here..."></textarea>
+      <button class="btn btn-success">Send Reply</button>
+      <div id="replyConfirm" class="mt-3 text-success fw-bold"></div>
+    </form>
+  </div>
+</section>
+
+<!-- 🎧 Custom Music Player -->
+<section class="text-center">
+  <div class="container">
+    <h2 class="section-title">🎧 My Song for You</h2>
+    <audio controls>
+      <source src="😭FAITH_THERUI_FT_GLORIA_KOTESTES(128k)(2).mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
+    <p class="mt-2 fst-italic">While I’m listening to you, this is the song playing in my heart 💖</p>
+  </div>
+</section>
+
+<section class="text-center bg-white py-5">
+  <div class="container">
+    <h2 class="section-title">🎥 Video za Hisia</h2>
+    <p class="lead">Hii hapa ni sehemu ndogo ya jinsi moyo wangu unavyokuwaza, Hyvine 💌</p>
+
+    <div class="row">
+      <!-- First Video -->
+      <div class="col-md-6 mb-4">
+        <div class="ratio ratio-16x9">
+          <video autoplay muted loop controls>
+            <source src="F.R._David_-_Words_-_Lyrics(133).mp4" type="video/mp4">
+            Kifaa chako hakisaidii video.
+          </video>
+        </div>
+        <p class="mt-2 fst-italic text-muted">Kila taswira ina hadithi ya moyo wangu kwako 💖</p>
+      </div>
+
+      <!-- Second Video -->
+      <div class="col-md-6 mb-4">
+        <div class="ratio ratio-16x9">
+          <video autoplay muted loop controls>
+            <source src="WhatsApp Video 2025-07-07 at 17.08.31.mp4" type="video/mp4">
+            Kifaa chako hakisaidii video.
+          </video>
+        </div>
+        <p class="mt-2 fst-italic text-muted">Na hii ni ndoto ya maisha nikiwa nawe 🌅</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+  <section class="text-center bg-light">
+    <div class="container">
+      <h2 class="section-title">🖼️ Memory Carousel</h2>
+      <div id="memoryCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="https://picsum.photos/seed/pic1/600/300" class="d-block w-100" alt="Memory 1">
+          </div>
+          <div class="carousel-item">
+            <img src="https://picsum.photos/seed/pic2/600/300" class="d-block w-100" alt="Memory 2">
+          </div>
+          <div class="carousel-item">
+            <img src="https://picsum.photos/seed/pic3/600/300" class="d-block w-100" alt="Memory 3">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#memoryCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#memoryCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        </button>
+      </div>
+    </div>
+  </section>
+<section class="text-center">
+  <div class="container">
+    <h2 class="section-title">🎶 Verses from My Heart</h2>
+    <p class="lead">I wrote these poems for you with all my heart:</p>
+    <blockquote class="blockquote">
+      <p>You are more beautiful than the dawn<br />
+      Your smile is an unwritten cure<br />
+      Every word you speak is like a song<br />
+      Awakening joy deep within my soul 💖</p>
+    </blockquote>
+  </div>
+</section>
+
+<section class="text-center" style="background-color:#fef1f6;">
+  <div class="container">
+    <h2 class="section-title">💗 Make Me Happy with Just One Like</h2>
+    <button class="btn btn-lg btn-danger" onclick="likeEffect()">❤️ Like</button>
+    <div id="likeResponse" class="mt-3"></div>
+  </div>
+</section>
+
+<!-- ❤️ Radio Button Choice -->
+<section class="text-center bg-light py-4" style="background-color: #222;">
+  <div class="container">
+    <h2 class="section-title">❤️ How Do You Feel?</h2>
+    <form id="radioForm" action="https://formspree.io/f/mpwregvq" method="POST" style="background-color: aquamarine;">
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="choice" id="choice1" value="I'm ready to see you as more than a friend"> 
+        <label class="form-check-label" for="choice1">I'm ready to see you as more than a friend</label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="choice" id="choice2" value="I need time to think"> 
+        <label class="form-check-label" for="choice2">I need time to think</label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="choice" id="choice3" value="I see you as just a friend for now"> 
+        <label class="form-check-label" for="choice3">I see you as just a friend for now</label>
+      </div>
+      <button type="submit" class="btn btn-outline-danger mt-3">Submit Answer</button>
+    </form>
+    <div id="choiceResult" class="mt-3 fw-bold text-primary"></div>
+  </div>
+</section>
+
+<footer>
+  <p>&copy; 2025 Ezra Korgoren | For Hyvine Only ❤️</p>
+</footer>
+
+
+  <script>
+const message = "Hyvine... every word here is for you. My soul says 'I want you', and my heart beats slowly when called by your name. 💖";
+    let index = 0;
+    const typedText = document.getElementById("typed-text");
+    function typeWriter() {
+      if (index < message.length) {
+        typedText.innerHTML += message.charAt(index);
+        index++;
+        setTimeout(typeWriter, 55);
+      }
+    }
+    typeWriter();
+// Auto Quotes
+const quotes = [
+  "True love comes unexpectedly, but it stays forever.",
+  "If you can make her laugh, you've captured her heart.",
+  "Time is short, but my heart for Hyvine is eternal.",
+  "It's not just words, but actions that show true love.",
+  "Real love begins with genuine friendship."
+];
+
+    setInterval(() => {
+      const q = quotes[Math.floor(Math.random() * quotes.length)];
+      document.getElementById("quoteBox").innerText = `“${q}”`;
+    }, 6000);
+
+function likeEffect() {
+  const response = document.getElementById("likeResponse");
+  response.innerHTML = "Thank you for your Like 💖! It means a lot to me, Hyvine.";
+}
+
+
+    //countdown since a chosen start date
+    const startDate = new Date("2024-06-01");
+    const today = new Date();
+    const diffTime = Math.abs(today - startDate);
+    const diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24));
+    document.getElementById("daysCounter").innerText = diffDays;
+// Compliment generator
+const compliments = [
+  "Hyvine, you shine brighter than the morning sun 🌞",
+  "When you look at me, I feel alive again",
+  "You are the poet of my heart",
+  "No one sparkles in my eyes like you do 💎",
+  "You are the dream of my wide-open eyes 😊"
+];
+
+    function showCompliment() {
+      const box = document.getElementById("complimentBox");
+      const random = compliments[Math.floor(Math.random() * compliments.length)];
+      box.innerText = random;
+    }
+
+    // Confession submission
+    function handleConfession(e) {
+      e.preventDefault();
+      const msg = document.getElementById("confessionInput").value;
+      const display = document.getElementById("confessionResult");
+      display.innerText = "Your message has been saved: \"" + msg + "\"";
+
+    }
+
+  // 🔐 Lock Screen Logic
+  function checkName() {
+    const input = document.getElementById('nameCheck').value.trim().toLowerCase();
+    const error = document.getElementById('nameError');
+    if (input === 'hyvine') {
+      document.getElementById('lockScreen').style.display = 'none';
+    } else {
+error.innerText = "Sorry, this message is for Hyvine only 💌";
+    }
+  }
+
+  // 💌 Save reply message
+  function saveResponse(e) {
+    e.preventDefault();
+    const msg = document.getElementById('replyMessage').value;
+document.getElementById('replyConfirm').innerText = "Your reply has been received: \"" + msg + "\"";
+  }
+
+  // 💕 Heart Rain generator
+  function createHeart() {
+    const heart = document.createElement('div');
+    heart.classList.add('heart');
+    heart.style.left = Math.random() * 100 + 'vw';
+    heart.style.animationDuration = (5 + Math.random() * 5) + 's';
+    document.getElementById('heartRain').appendChild(heart);
+    setTimeout(() => heart.remove(), 10000);
+  }
+  setInterval(createHeart, 300);
+  </script>
+</body>
+</html>
